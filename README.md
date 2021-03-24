@@ -1,7 +1,8 @@
                                     _**Decrypting 6-Round-DES**_
 
 
-For solving this, we used **DIFFERENTIAL CRYPTANALYSIS**. In order to break the six rounds of the given DES, 
+**Data Encryption Standard** is a block cipher with blocksize = 64 bits and key size = 56 bits. We are breaking a 6-round DES.
+For solving this, we use **DIFFERENTIAL CRYPTANALYSIS**. In order to break the six rounds of the given DES, 
 we do a chosen plaintext attack . We need a 4 round characteristic to break a 6-round DES which is obtained 
 after 4 rounds of the 5-round characteristic discussed in lecture 7. The differential iterative characteristic
 starts at 405c0000 04000000 and after 4 rounds gives the differential 00540000 04000000
