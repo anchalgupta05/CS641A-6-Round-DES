@@ -1,11 +1,9 @@
-# CS641A-6-Round-DES
+                                   Decrypting 6-Round-DES
 
-Inputs generate folder - generates 64 bits of binary string using random_inputs.cpp and stores then in random.txt.
-Then generates pairs of input plaintext using random_inputs_xor.cpp and stores them in input_random.txt.
 
-get_outputs.sh has the script that stores all the commands that we will send to the ssh server.
-In order to grep the encrypted text, we first store all the terminal output in ssh_outputs.log then the encrypted text is grep from this file and stored in freq_outputs.txt. 
-get_outputs.sh redirected the output to ssh_outputs.log directly and the grepping part was done using the report_freq.py.
-
-The get_outputs.sh was made from the script.py with the help of input_random.txt that we had generated above.
-Delete ssh_output.log before running the get_outputs.sh since it appends and delete freq_outputs.txt before running the report_freq.py (same reason).
+For solving this, we used DIFFERENTIAL CRYPTANALYSIS. In order to break the six rounds of the given DES, 
+we do a chosen plaintext attack . We need a 4 round characteristic to break a 6-round DES which is obtained 
+after 4 rounds of the 5-round characteristic discussed in lecture 7. The differential iterative characteristic
+starts at 405c0000 04000000 and after 4 rounds gives the differential 00540000 04000000
+with probability = ¼ *5/128 * ¼ * 5/128 = 0.000381 . Thus we need approximately 20/0.000381
+= 52000 chosen input pairs to get assurity of finding the right key. 
