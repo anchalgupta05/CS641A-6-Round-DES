@@ -1,4 +1,4 @@
-                                  _**Decrypting 6-Round-DES**_
+                                    _**Decrypting 6-Round-DES**_
 
 
 For solving this, we used **DIFFERENTIAL CRYPTANALYSIS**. In order to break the six rounds of the given DES, 
@@ -24,7 +24,7 @@ Now, using the input_pairs.txt, we generate a script that has all the commands t
 To convert these output pairs to 64-bit binary string, ‘stringtobin.cpp’ was used and the 64-bit binary was stored in outputs.txt.
 
 
-_**6 round DES decryption**_
+_**6 round DES decryption-**_
 
 Now, we have the input plaintext (1 lakh pairs) and output ciphertext (1 lakh pairs) in the binary form. We need output xor of S box of last round (gamma1 xor gamma2) , input xor to S box of last round (beta1 xor beta2) and expanded values of R5 (alpha1,alpha2).
 and R5=L6.
@@ -69,8 +69,8 @@ decrypt_pwd.cpp which decrypts the password using our key and gives the decrypte
 Among these , the trailing 48s represent zero padding and are ignored . Rest values represent
 ascii values. So, the password comes out to be : qwsnhvbshy
 
-_
-**Flowchart for the code:**_
+
+_**Flowchart for the code-**_
 input_gen.cpp->init_inv_perm.cpp->take_xor.cpp->script_build.cpp->script_game.sh->clean_out
 put.py->stringtobin.cpp->differential.cpp->alpha1.cpp->key_freq.cpp->key_permute.cpp->key_g
 en.cpp->stringtodec->key_brute.cpp->decrypt_pwd.cpp
