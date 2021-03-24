@@ -71,6 +71,7 @@ ascii values. So, the password comes out to be : qwsnhvbshy
 
 
 _**Flowchart for the code-**_
+
 input_gen.cpp->init_inv_perm.cpp->take_xor.cpp->script_build.cpp->script_game.sh->clean_out
 put.py->stringtobin.cpp->differential.cpp->alpha1.cpp->key_freq.cpp->key_permute.cpp->key_g
 en.cpp->stringtodec->key_brute.cpp->decrypt_pwd.cpp
